@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+      let name = document.getElementById('name').value;
+      if (name === '') {
+        alert('Please enter your name');
+        event.preventDefault();
+      }
+    });
+    
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register for the Event</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="background-color: rgb(220,230,250)">
+  <header>
+    <!-- Same navigation -->
+  </header>
+
+  <section class="registration-form">
+    <h2>Event Registration Form</h2>
+    <form>
+      <!-- Text Input -->
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <!-- Email Input -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <!-- Date Picker -->
+      <label for="date">Select Date:</label>
+      <input type="date" id="date" name="date">
+
+      <!-- Combo Box -->
+      <label for="event-type">Choose Event Type:</label>
+      <select id="event-type" name="event-type">
+        <option value="seminar">Seminar</option>
+        <option value="workshop">Workshop</option>
+      </select>
+
+      <!-- Checkboxes -->
+      <label for="topics">Choose Your Topics of Interest:</label>
+      <input type="checkbox" id="topic1" name="topics" value="AI"> Artificial Intelligence
+      <input type="checkbox" id="topic2" name="topics" value="ML"> Machine Learning
+
+      <!-- Radio Buttons -->
+      <p>Will you attend the gala dinner?</p>
+      <input type="radio" id="yes" name="dinner" value="yes">
+      <label for="yes">Yes</label>
+      <input type="radio" id="no" name="dinner" value="no">
+      <label for="no">No</label>
+
+      <!-- File Upload -->
+      <label for="resume">Upload Your Resume:</label>
+      <input type="file" id="resume" name="resume">
+
+      <!-- Submit Button -->
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
